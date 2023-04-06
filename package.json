@@ -1,0 +1,40 @@
+{
+  "name": "thuctapcoso_project",
+  "version": "1.0.0",
+  "description": "thuc tap co so",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "dev": "nodemon --inspect ./src/index.js",
+    "sass": "sass --style=compressed --no-source-map src/resources/scss:src/public/css",
+    "sass-watch": "sass --style=compressed --no-source-map --watch src/resources/scss:src/public/css"
+  },
+  "keywords": [
+    "thuctapcoso",
+    "hash",
+    "md5",
+    "sha1",
+    "sha256",
+    "sh512",
+    "sha3"
+  ],
+  "author": "leduckhuong",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.0.1",
+    "nodemailer": "^6.9.1",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "sass": "^1.58.3"
+  }
+}

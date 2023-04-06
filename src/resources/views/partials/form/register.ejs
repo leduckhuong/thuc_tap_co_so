@@ -1,0 +1,41 @@
+<form class="form" id="register-form" method="post" >
+    <p class="form_heading">Đăng ký</p>
+    <a href="./login" class="form_transfer">Đăng nhập</a>
+    <div class="form_group">
+        <p class="form_group--heading">tài khoản</p>
+        <input type="text" name="account" placeholder="Nhập tài khoản">
+        <span class="form_message"></span>
+    </div>
+    <div class="form_group">
+        <p class="form_group--heading">mật khẩu</p>
+        <input type="password" name="password" placeholder="Nhập mật khẩu">
+        <span class="form_message"></span>
+    </div>
+    <div class="form_group">
+        <p class="form_group--heading">mật khẩu</p>
+        <input type="password" id="password-verify" placeholder="Nhập lại mật khẩu">
+        <span class="form_message"></span>
+    </div>
+    <button type="submit">Đăng ký</button>
+</form>
+<script src="./js/form.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const registerForm = new Validator(
+            '#register-form',
+            '.form_group',
+            '.form_message',
+            'error',
+            [
+                Validator.Required('input[name="account"]', 'Nhập tài khoản muốn đăng ký!'),
+                Validator.Required('input[name="password"]', 'Nhập mật khẩu!'),
+                Validator.MinLength('input[name="password"]', 6, 'Nhập vào tối thiểu 6 ký tự'),
+                Validator.Required('input[id="password-verify"]', 'Nhập lại mật khẩu!'),
+                Validator.Confirmed('input[id="password-verify"]',() => {
+                    return $('input[name="password"]').val();
+                }, 'Mật khẩu không khớp!'),
+            ]
+        );
+        registerForm.start();
+    });
+</script>

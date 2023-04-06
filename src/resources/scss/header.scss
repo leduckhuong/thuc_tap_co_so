@@ -1,0 +1,30 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    height: 46.5px;
+    background-color: darkcyan;
+    .header_heading {
+        line-height: 4.65rem;
+    }
+    .header_profile {
+        display: flex;
+        .header_profile--name {
+            margin-right: 4px;
+            line-height: 4.65rem;
+            color: #fff;
+        }
+        .header_profile--avatar { 
+            margin-top: 6px;
+            margin-right: 8px;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background: url('/imgs/default-avatar.jpg') center center / cover no-repeat;
+        }
+    }
+}

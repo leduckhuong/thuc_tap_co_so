@@ -1,0 +1,11 @@
+<main class="main">
+    <%if(typeof isRegister === 'boolean' && isRegister){%>
+        <%- include('./form/register'); %>
+    <%}%>
+    <%if(typeof isLogin === 'boolean' && isLogin){%>
+        <%- include('./form/login'); %>
+    <%}%>
+    <%if(typeof isHome === 'boolean' && isHome){%>
+        <%- include('./passed/home'); %>
+    <%}%>
+</main>

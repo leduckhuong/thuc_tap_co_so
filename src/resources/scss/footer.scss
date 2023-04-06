@@ -1,0 +1,11 @@
+.footer {
+    height: 200px;
+    background-image: linear-gradient(to right bottom, #FFCC66, #85b6cd);
+    padding-top: 60px;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    .footer_email {
+        margin-top: 16px;
+    }
+}
