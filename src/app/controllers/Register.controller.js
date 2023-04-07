@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const crypto = require('crypto-js');
 const User = require('../models/User.model');
 
 class Register {
